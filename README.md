@@ -4,8 +4,8 @@
 
 | Таблицы | колонки | отношение |
 | ------- | ------- | --------- |
-| posts | id (ai), img, date, title, content, author_id, role | posts.author_id ( => users.id) |
-| users | id (ai), name, email | users.id ( => posts.author_id => comments.author_id) |
+| posts | id (ai), img, date, title, content, author_id | posts.author_id ( => users.id) |
+| users | id (ai), name, email, role | users.id ( => posts.author_id => comments.author_id) |
 | comments | id(ai), date, post_id, author_id, parent_id | comments.post_id ( => posts.id ), comments.author_id ( => users.id), comments.parent_id ( => comments.id) |
 
 
